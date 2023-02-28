@@ -109,6 +109,11 @@ input[type=text]:hover{
   margin-right: auto;
 }
 
+#btn5{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #resGen{
     font-family: Poppins;
     color: white;
