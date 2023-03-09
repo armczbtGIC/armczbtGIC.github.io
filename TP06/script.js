@@ -22,8 +22,8 @@ function getInfos() {
         .then(async (res) => {
             let data = await res.json();
             console.log(data);
-            localStorage.setItem(`${page}`, JSON.stringify(data)); // stocke les données dans localStorage avec la clé `passengerData${page}`
-            localStorage.setItem(`max-page`, page); // stocke le numéro de page dans localStorage avec la clé `passengerPage`
+            localStorage.setItem(`${page}`, JSON.stringify(data)); 
+            localStorage.setItem(`max-page`, page); 
             return data;
         });
 }
@@ -81,12 +81,12 @@ function appInfosDrink() {
 
 
 
-appInfos();
+
 appInfosDrink();
 
-
+appInfos();
 scroller2.addEventListener("scroll", handleScroll);
-scrollerd2.addEventListener("scroll", handleScrollDrink);
+
 
 function handleScroll() {
     const { scrollTop, clientHeight, scrollHeight } = scroller2;
@@ -125,6 +125,8 @@ function handleScroll() {
         }
     }
 }
+
+scrollerd2.addEventListener("scroll", handleScrollDrink);
 
 function handleScrollDrink() {
     const { scrollTop, clientHeight, scrollHeight } = scrollerd2;
